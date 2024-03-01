@@ -3,7 +3,7 @@ const fetchPromise = fetch(
 );
 
 fetchPromise.then((response) => {
-  const jsonPromise = response.json();
+  const jsonPromise = response.json(); //jsonPromise is a promise object and cannot execute until fetchPrmoise executes 
   jsonPromise.then((products) => {
     products.forEach(product => {
       console.log(product.name);
